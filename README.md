@@ -69,20 +69,22 @@ For both of the input images: the Apple and the Orange, we must build a Laplacia
 ![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap16.png)
 
 
+![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap17.png)
+
 Applying the Gaussian filter to the subsampled mask makes the image blend smooth. The mask serves to help us combine the Laplacian pyramids for the two inputs. Using an alpha+(1-alpha) combination, at each scale, we multiply the mask by Image A’s Laplacian, and then multiply Image B’s Laplacian by (1-the mask) and sum the two.
 
-![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap17.png)
+![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap18.png)
 
 Finally, we reconstruct the original image at each scale by adding the combined Laplacian to the original Gaussian-resized images multiplied by their respective masks. This is akin to adding the details lost while resizing (combined Laplacian) back into the Gaussian-smoothed image, combined according to the desired form (the mask). We perform this operation repeatedly, upsampling the result and adding the result to the combined Laplacian, until we have our fully blended image at the original scale.
 Here we have the complete algorithm for this image blend:
-![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap18.png)
+![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap19.png)
 
 To visualize what this algorithm is doing, the final Laplacian pyramid looks like this:
 
-![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap19.png)
+![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap20.png)
 
 Laplacian Pyramids are a pretty awesome way to blend images. With Laplacian image blending, we can do all sorts of things, like blend celebrity faces! We can also use different masks that allow more complex combinations.
 
-![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap20.png)
+![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap5.png)
 
 I can't figure out how to center these images, sorry! :)
