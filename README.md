@@ -87,4 +87,4 @@ Laplacian Pyramids are a pretty awesome way to blend images. With Laplacian imag
 
 ![alt text](https://github.com/mzhao98/laplacian_blend/blob/master/images/lap5.png)
 
-I can't figure out how to center these images, sorry! :)
+I can't figure out how to center these images in the Readme! :P
